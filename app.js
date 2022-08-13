@@ -22,6 +22,8 @@ const nav= [
     }
 ]
 
+const PORT=process.env.PORT||3000;
+
 const loginRouter = require('./src/routes/loginroute');
 const signupRouter = require('./src/routes/signuproute');
 const homeRouter = require('./src/routes/homerouter');
@@ -57,6 +59,6 @@ app.get('/',function(req,res){
 
 
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log("Server Ready on 3000");
 });
